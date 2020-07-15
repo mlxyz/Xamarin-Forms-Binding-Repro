@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<views:GenericPage xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:controls="clr-namespace:ReproProjectBindingIssue.Controls;assembly=ReproProjectBindingIssue"
+                   xmlns:views="clr-namespace:ReproProjectBindingIssue.Views;assembly=ReproProjectBindingIssue"
+                   xmlns:viewModels="clr-namespace:ReproProjectBindingIssue.ViewModels;assembly=ReproProjectBindingIssue"
+                   mc:Ignorable="d"
+                   x:Class="ReproProjectBindingIssue.Views.Page1" Test="{Binding Test, Mode=OneWayToSource}" x:Name="Root">
+    <views:GenericPage.BindingContext>
+        <viewModels:ViewModel />
+    </views:GenericPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+
+            <controls:Control Test="{Binding Source={x:Reference Root}, Path=BindingContext.Test, Mode=OneWay}" />
+        </StackLayout>
+    </ContentPage.Content>
+</views:GenericPage>
