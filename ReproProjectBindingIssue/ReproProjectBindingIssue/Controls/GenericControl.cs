@@ -20,7 +20,7 @@ namespace ReproProjectBindingIssue.Controls
 
         private static void PropertyChanged(BindableObject bindable, object oldvalue, object newvalue)
         {
-            System.Diagnostics.Debug.WriteLine("property changed");
+            System.Diagnostics.Debug.WriteLine("property changed"); //gets the default values from GenericPage (1,2,3) as expected
         }
     }
 }

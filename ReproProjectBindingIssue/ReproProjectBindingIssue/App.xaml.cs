@@ -2,6 +2,7 @@
 using ReproProjectBindingIssue.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Page = ReproProjectBindingIssue.Views.Page;
 
 namespace ReproProjectBindingIssue
 {
@@ -11,7 +12,7 @@ namespace ReproProjectBindingIssue
         {
             InitializeComponent();
 
-            MainPage = new Page1();
+            MainPage = new Page();
         }
 
         protected override void OnResume()

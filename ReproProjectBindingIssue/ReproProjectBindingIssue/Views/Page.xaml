@@ -8,7 +8,7 @@
                    xmlns:views="clr-namespace:ReproProjectBindingIssue.Views;assembly=ReproProjectBindingIssue"
                    xmlns:viewModels="clr-namespace:ReproProjectBindingIssue.ViewModels;assembly=ReproProjectBindingIssue"
                    mc:Ignorable="d"
-                   x:Class="ReproProjectBindingIssue.Views.Page1" Test="{Binding Test, Mode=OneWayToSource}" x:Name="Root">
+                   x:Class="ReproProjectBindingIssue.Views.Page" Test="{Binding Test, Mode=OneWayToSource}" x:Name="Root">
     <views:GenericPage.BindingContext>
         <viewModels:ViewModel />
     </views:GenericPage.BindingContext>

@@ -12,7 +12,7 @@ namespace ReproProjectBindingIssue.ViewModels
         public Vector3 Test
         {
             get => _test;
-            set => _test = value;
+            set => _test = value; //only gets the default value from GenericControl (4,5,6), but *not* the default values from GenericPage
         }
     }
 }

@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace ReproProjectBindingIssue.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : GenericPage
+    public partial class Page : GenericPage
     {
-        public Page1()
+        public Page()
         {
             InitializeComponent();
         }
