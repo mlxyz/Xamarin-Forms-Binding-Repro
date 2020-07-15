@@ -7,13 +7,16 @@
                          xmlns:controls="clr-namespace:ReproProjectBindingIssue.Controls;assembly=ReproProjectBindingIssue"
                          xmlns:viewModels="clr-namespace:ReproProjectBindingIssue.ViewModels;assembly=ReproProjectBindingIssue"
                          mc:Ignorable="d"
-                         x:Class="ReproProjectBindingIssue.Controls.Control" Test="{Binding Test, Mode=OneWayToSource}">
+                         x:Class="ReproProjectBindingIssue.Controls.Control"
+                         Test="{Binding Test, Mode=OneWayToSource}">
+    <!-- The binding on the line above appears to be broken -->
     <controls:GenericControl.BindingContext>
         <viewModels:ControlViewModel />
     </controls:GenericControl.BindingContext>
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="Hello Xamarin.Forms!" />
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="{Binding Test, StringFormat='Modified using Binding -> {0}'}" />
+            <Label x:FieldModifier="public" x:Name="label" />
         </StackLayout>
     </ContentView.Content>
 </controls:GenericControl>

@@ -14,10 +14,10 @@
     </views:GenericPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-
+            <Button Text="Change Value"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Command="{Binding Source={x:Reference Root}, Path=Command}" />
             <controls:Control Test="{Binding Source={x:Reference Root}, Path=BindingContext.Test, Mode=OneWay}" />
         </StackLayout>
     </ContentPage.Content>
